@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process sayHello {
+    cpus 50
     input:
     val x
 
