@@ -1,7 +1,6 @@
 #!/usr/bin/env nextflow
 
 process sayHello {
-    cpus 50
     input:
     val x
 
@@ -11,6 +10,7 @@ process sayHello {
     script:
     """
     echo '${x} world!'
+    env | grep AZ_BATCH_TASK_WORKING_DIR
     """
 }
 
